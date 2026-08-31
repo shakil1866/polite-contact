@@ -11,7 +11,7 @@
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const N8N_WEBHOOK_URL =
-  "https://shakil1866.app.n8n.cloud/webhook-test/6f72b2fa-51cf-4df6-bbce-e2a02e37f2e0";
+  "https://shakil1866.app.n8n.cloud/webhook/6f72b2fa-51cf-4df6-bbce-e2a02e37f2e0";
 
 // ─── State ────────────────────────────────────────────────────────────────────
 
