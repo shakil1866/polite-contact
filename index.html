@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — Get in Touch</title>
+    <meta
+      name="description"
+      content="Send us a message. A simple contact form for name, email, phone, and your message."
+    />
+    <meta property="og:title" content="Contact Us — Get in Touch" />
+    <meta
+      property="og:description"
+      content="Send us a message. A simple contact form for name, email, phone, and your message."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main-content">
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>Contact Us</h1>
+          <p>Have a question or want to work together? Fill out the form below and we'll get back to you.</p>
+        </div>
+
+        <!-- Success Alert -->
+        <div id="success-alert" class="alert alert-success" role="alert" hidden>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <path d="m9 11 3 3L22 4" />
+          </svg>
+          <div>
+            <p class="alert-title">Thanks for reaching out!</p>
+            <p class="alert-body">Your message has been received. We'll reply soon.</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" novalidate class="contact-card">
+
+          <!-- Name Field -->
+          <div class="field" id="field-name">
+            <label for="name" class="field-label">
+              Name <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              class="field-input"
+              placeholder="Your name"
+              aria-describedby="name-error"
+            />
+            <p id="name-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- Email Field -->
+          <div class="field" id="field-email">
+            <label for="email" class="field-label">
+              Email <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              class="field-input"
+              placeholder="you@example.com"
+              aria-describedby="email-error"
+            />
+            <p id="email-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- Phone Field -->
+          <div class="field" id="field-phone">
+            <label for="phone" class="field-label">
+              Phone <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+              class="field-input"
+              placeholder="+1 (555) 123-4567"
+              aria-describedby="phone-error"
+            />
+            <p id="phone-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- Message Field -->
+          <div class="field" id="field-message">
+            <label for="message" class="field-label">
+              Message <span class="required" aria-hidden="true">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              class="field-input field-textarea"
+              placeholder="Tell us how we can help…"
+              aria-describedby="message-error"
+            ></textarea>
+            <p class="char-count"><span id="char-count">0</span>/1000</p>
+            <p id="message-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- Submit Error -->
+          <div id="submit-error" class="alert alert-error" role="alert" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4" />
+              <path d="M12 16h.01" />
+            </svg>
+            <p id="submit-error-msg">We couldn't send your message right now. Please try again in a moment.</p>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submit-btn" class="submit-btn">
+            <svg
+              id="spinner"
+              class="spinner"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              hidden
+            >
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            <span id="btn-text">Send Message</span>
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
